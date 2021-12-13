@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package bicycle;
 
+option go_package = "./proto;crank";
+
 service Crank {
   rpc CreateCrank(CreateCrankRequest) returns (CreateCrankResponse);
 }
