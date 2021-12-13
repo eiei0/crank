@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package bicycle;
+
+service Crank {
+  rpc CreateCrank(CreateCrankRequest) returns (CreateCrankResponse);
+}
+
+message CreateCrankRequest {
+  string frame_id = 1;
+  string manufacturer = 2;
+  string arm_length = 3;
+  string model = 4;
+}
+
+message CreateCrankResponse {
+  BikeCrank crank = 1;
+}
+
+message BikeCrank {
+  string id = 1;
+  string frame_id = 2;
+  string manufacturer = 3;
+  string arm_length = 4;
+  string model = 5;
+}
